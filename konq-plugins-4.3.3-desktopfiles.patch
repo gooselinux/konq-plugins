@@ -1,0 +1,260 @@
+diff -ur konq-plugins-orig/adblock/plugin_adblock.desktop konq-plugins-4.3.3/adblock/plugin_adblock.desktop
+--- konq-plugins-orig/adblock/plugin_adblock.desktop	2009-11-05 14:44:40.000000000 +0100
++++ konq-plugins-4.3.3/adblock/plugin_adblock.desktop	2010-06-18 18:37:05.106221100 +0200
+@@ -76,7 +76,6 @@
+ Comment[x-test]=xxShow all blockable html elementsxx
+ Comment[zh_CN]=显示所有可屏蔽的 html 元素
+ Comment[zh_TW]=顯示所有可阻擋的 html 元素
+-Encoding=UTF-8
+ X-KDE-Library=adblock
+ X-KDE-PluginInfo-Author=Danie Galdi
+ X-KDE-PluginInfo-Email=daniele.galdi@gmail.com
+diff -ur konq-plugins-orig/akregator/akregator_konqfeedicon.desktop konq-plugins-4.3.3/akregator/akregator_konqfeedicon.desktop
+--- konq-plugins-orig/akregator/akregator_konqfeedicon.desktop	2009-11-05 14:44:33.000000000 +0100
++++ konq-plugins-4.3.3/akregator/akregator_konqfeedicon.desktop	2010-06-18 18:36:51.462345965 +0200
+@@ -79,7 +79,6 @@
+ Comment[x-test]=xxDisplays an icon in the status bar if the page contains a feedxx
+ Comment[zh_CN]=如果页面上包含种子，就在状态栏上显示一个图标
+ Comment[zh_TW]=如果頁面中有 RSS feed，則在狀態列中顯示圖示
+-Encoding=UTF-8
+ Type=Service
+ X-KDE-Library=akregatorkonqfeedicon
+ X-KDE-PluginInfo-Author=Teemu Rytilahti
+diff -ur konq-plugins-orig/akregator/akregator_konqplugin.desktop konq-plugins-4.3.3/akregator/akregator_konqplugin.desktop
+--- konq-plugins-orig/akregator/akregator_konqplugin.desktop	2009-11-05 14:44:33.000000000 +0100
++++ konq-plugins-4.3.3/akregator/akregator_konqplugin.desktop	2010-06-18 18:36:47.242249788 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Service
+ Name=Add Feed to Akregator
+ Name[ar]=أضف التغذية إلى Akregator
+diff -ur konq-plugins-orig/autorefresh/autorefresh.desktop konq-plugins-4.3.3/autorefresh/autorefresh.desktop
+--- konq-plugins-orig/autorefresh/autorefresh.desktop	2009-11-05 14:44:38.000000000 +0100
++++ konq-plugins-4.3.3/autorefresh/autorefresh.desktop	2010-06-18 18:36:27.157346462 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=autorefresh
+ X-KDE-PluginInfo-Author=Richard J. Moore
+ X-KDE-PluginInfo-Email=rich@kde.org
+diff -ur konq-plugins-orig/babelfish/plugin_babelfish.desktop konq-plugins-4.3.3/babelfish/plugin_babelfish.desktop
+--- konq-plugins-orig/babelfish/plugin_babelfish.desktop	2009-11-05 14:44:32.000000000 +0100
++++ konq-plugins-4.3.3/babelfish/plugin_babelfish.desktop	2010-06-18 18:36:02.456221377 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=babelfish
+ X-KDE-PluginInfo-Author=Kurt Granroth, Rand2342
+ X-KDE-PluginInfo-Email=granroth@kde.org, rand2342@yahoo.com
+diff -ur konq-plugins-orig/crashes/crashesplugin.desktop konq-plugins-4.3.3/crashes/crashesplugin.desktop
+--- konq-plugins-orig/crashes/crashesplugin.desktop	2009-11-05 14:44:38.000000000 +0100
++++ konq-plugins-4.3.3/crashes/crashesplugin.desktop	2010-06-18 18:37:01.397221381 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=Crashes
+ X-KDE-PluginInfo-Author=Alexander Kellett
+ X-KDE-PluginInfo-Email=lypanov@kde.org
+diff -ur konq-plugins-orig/dirfilter/dirfilterplugin.desktop konq-plugins-4.3.3/dirfilter/dirfilterplugin.desktop
+--- konq-plugins-orig/dirfilter/dirfilterplugin.desktop	2009-11-05 14:44:37.000000000 +0100
++++ konq-plugins-4.3.3/dirfilter/dirfilterplugin.desktop	2010-06-18 18:36:55.061346430 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Service
+ X-KDE-PluginInfo-Author=Dawit Alemayehu,Martin Koller
+ X-KDE-PluginInfo-Email=adawit@kde.org,m.koller@surfeu.at
+diff -ur konq-plugins-orig/domtreeviewer/plugin_domtreeviewer.desktop konq-plugins-4.3.3/domtreeviewer/plugin_domtreeviewer.desktop
+--- konq-plugins-orig/domtreeviewer/plugin_domtreeviewer.desktop	2009-11-05 14:44:35.000000000 +0100
++++ konq-plugins-4.3.3/domtreeviewer/plugin_domtreeviewer.desktop	2010-06-18 18:36:35.329221377 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=domtreeviewer
+ X-KDE-PluginInfo-Author=The Kafka Team, Andreas Schlapbach
+ X-KDE-PluginInfo-Email=kde-kafka@master.kde.org, schlpbch@iam.unibe.ch
+diff -ur konq-plugins-orig/fsview/fsview.desktop konq-plugins-4.3.3/fsview/fsview.desktop
+--- konq-plugins-orig/fsview/fsview.desktop	2009-11-05 14:44:41.000000000 +0100
++++ konq-plugins-4.3.3/fsview/fsview.desktop	2010-06-18 18:34:28.918345792 +0200
+@@ -1,6 +1,5 @@
+ # KDE Config File
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Application
+ Exec=fsview -caption "%c" %u
+ MimeType=inode/directory;
+diff -ur konq-plugins-orig/fsview/fsview_part.desktop konq-plugins-4.3.3/fsview/fsview_part.desktop
+--- konq-plugins-orig/fsview/fsview_part.desktop	2009-11-05 14:44:41.000000000 +0100
++++ konq-plugins-4.3.3/fsview/fsview_part.desktop	2010-06-18 18:34:25.237221402 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=File Size View
+ Name[ar]=عرض حجم الملف
+ Name[bg]=Преглед на файлов размер
+diff -ur konq-plugins-orig/imagerotation/imageconverter.desktop konq-plugins-4.3.3/imagerotation/imageconverter.desktop
+--- konq-plugins-orig/imagerotation/imageconverter.desktop	2009-11-05 14:44:41.000000000 +0100
++++ konq-plugins-4.3.3/imagerotation/imageconverter.desktop	2010-06-18 18:41:09.235346926 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ ServiceTypes=KonqPopupMenu/Plugin,image/*
+ TryExec=convert
+ Type=Service
+@@ -51,7 +50,6 @@
+ X-KDE-Submenu[x-test]=xxConvert Toxx
+ X-KDE-Submenu[zh_CN]=转换为
+ X-KDE-Submenu[zh_TW]=轉換為
+-TryExec=convert
+ 
+ [Desktop Action convToJPEG]
+ Name=JPEG
+diff -ur konq-plugins-orig/imagerotation/jpegorient.desktop konq-plugins-4.3.3/imagerotation/jpegorient.desktop
+--- konq-plugins-orig/imagerotation/jpegorient.desktop	2009-11-05 14:44:41.000000000 +0100
++++ konq-plugins-4.3.3/imagerotation/jpegorient.desktop	2010-06-18 18:37:25.226221091 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ TryExec=jpegorient
+ Type=Service
+ ServiceTypes=KonqPopupMenu/Plugin,image/jpeg
+diff -ur konq-plugins-orig/khtmlsettingsplugin/khtmlsettingsplugin.desktop konq-plugins-4.3.3/khtmlsettingsplugin/khtmlsettingsplugin.desktop
+--- konq-plugins-orig/khtmlsettingsplugin/khtmlsettingsplugin.desktop	2009-11-05 14:44:32.000000000 +0100
++++ konq-plugins-4.3.3/khtmlsettingsplugin/khtmlsettingsplugin.desktop	2010-06-18 18:36:38.584221251 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=khtmlsettingsplugin
+ X-KDE-PluginInfo-Author=Carsten Pfeiffer
+ X-KDE-PluginInfo-Email=pfeiffer@kde.org
+diff -ur konq-plugins-orig/kimgalleryplugin/kimgalleryplugin.desktop konq-plugins-4.3.3/kimgalleryplugin/kimgalleryplugin.desktop
+--- konq-plugins-orig/kimgalleryplugin/kimgalleryplugin.desktop	2009-11-05 14:44:32.000000000 +0100
++++ konq-plugins-4.3.3/kimgalleryplugin/kimgalleryplugin.desktop	2010-06-18 18:36:58.261220956 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-PluginInfo-Author=Lukas Tinkl,Andreas Schlapbach
+ X-KDE-PluginInfo-Email=lukas@kde.org,schlpbch@iam.unibe.ch
+ X-KDE-PluginInfo-Name=ImgGalleryPlugin
+diff -ur konq-plugins-orig/mediarealfolder/media_realfolder.desktop konq-plugins-4.3.3/mediarealfolder/media_realfolder.desktop
+--- konq-plugins-orig/mediarealfolder/media_realfolder.desktop	2009-11-05 14:44:34.000000000 +0100
++++ konq-plugins-4.3.3/mediarealfolder/media_realfolder.desktop	2010-06-18 18:37:17.924221159 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Service
+ ServiceTypes=KonqPopupMenu/Plugin,media/cdrom_mounted,media/cdwriter_mounted,media/dvd_mounted,media/floppy5_mounted,media/floppy_mounted,media/hdd_mounted,media/nfs_mounted,media/smb_mounted,media/removable_mounted,media/zip_mounted
+ Actions=MediaRealFolder;
+diff -ur konq-plugins-orig/microformat/mf_konqmficon.desktop konq-plugins-4.3.3/microformat/mf_konqmficon.desktop
+--- konq-plugins-orig/microformat/mf_konqmficon.desktop	2009-11-05 14:44:36.000000000 +0100
++++ konq-plugins-4.3.3/microformat/mf_konqmficon.desktop	2010-06-18 18:36:20.190220900 +0200
+@@ -78,7 +78,6 @@
+ Comment[x-test]=xxDisplays an icon in the status bar if the page contains a microformatxx
+ Comment[zh_CN]=如果这个页面包含微格式，就在状态栏中显示一个图标
+ Comment[zh_TW]=如果頁面中包含微格式（microformat）則在狀態列中顯示圖示
+-Encoding=UTF-8
+ Type=Service
+ X-KDE-Library=mfkonqmficon
+ X-KDE-PluginInfo-Author=George Staikos
+diff -ur konq-plugins-orig/minitools/minitoolsplugin.desktop konq-plugins-4.3.3/minitools/minitoolsplugin.desktop
+--- konq-plugins-orig/minitools/minitoolsplugin.desktop	2009-11-05 14:44:46.000000000 +0100
++++ konq-plugins-4.3.3/minitools/minitoolsplugin.desktop	2010-06-18 18:37:08.337346425 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=Minitools
+ X-KDE-PluginInfo-Author=Alexander Kellett
+ X-KDE-PluginInfo-Email=lypanov@kde.org
+diff -ur konq-plugins-orig/rellinks/plugin_rellinks.desktop konq-plugins-4.3.3/rellinks/plugin_rellinks.desktop
+--- konq-plugins-orig/rellinks/plugin_rellinks.desktop	2009-11-05 14:44:36.000000000 +0100
++++ konq-plugins-4.3.3/rellinks/plugin_rellinks.desktop	2010-06-18 18:36:42.057221006 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=rellinks
+ X-KDE-PluginInfo-Author=Anders Lund, Franck Quélain, Kevin Krammer, Olivier Goffart
+ X-KDE-PluginInfo-Email=anders@alweb.dk, shift@free.fr, kevin.krammer@gmx.at, ogoffart@kde.org
+diff -ur konq-plugins-orig/searchbar/searchbar.desktop konq-plugins-4.3.3/searchbar/searchbar.desktop
+--- konq-plugins-orig/searchbar/searchbar.desktop	2009-11-05 14:44:39.000000000 +0100
++++ konq-plugins-4.3.3/searchbar/searchbar.desktop	2010-06-18 18:36:23.517221218 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Icon=system-search
+ Type=Service
+ X-KDE-Library=searchbar
+diff -ur konq-plugins-orig/sidebar/mediaplayer/mediaplayerplugin.desktop konq-plugins-4.3.3/sidebar/mediaplayer/mediaplayerplugin.desktop
+--- konq-plugins-orig/sidebar/mediaplayer/mediaplayerplugin.desktop	2009-11-05 14:44:45.000000000 +0100
++++ konq-plugins-4.3.3/sidebar/mediaplayer/mediaplayerplugin.desktop	2010-06-18 18:37:28.749221317 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=Media Player
+ Name[ar]=مشغَل الوسائط
+ Name[be]=Медыяпрайгравальнік
+diff -ur konq-plugins-orig/sidebar/mediaplayer/mplayer_add.desktop konq-plugins-4.3.3/sidebar/mediaplayer/mplayer_add.desktop
+--- konq-plugins-orig/sidebar/mediaplayer/mplayer_add.desktop	2009-11-05 14:44:45.000000000 +0100
++++ konq-plugins-4.3.3/sidebar/mediaplayer/mplayer_add.desktop	2010-06-18 18:37:31.472221348 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Link
+ URL=
+ Icon=package-multimedia
+diff -ur konq-plugins-orig/sidebar/metabar/src/metabar_add.desktop konq-plugins-4.3.3/sidebar/metabar/src/metabar_add.desktop
+--- konq-plugins-orig/sidebar/metabar/src/metabar_add.desktop	2009-11-05 14:44:44.000000000 +0100
++++ konq-plugins-4.3.3/sidebar/metabar/src/metabar_add.desktop	2010-06-18 18:37:41.849346195 +0200
+@@ -42,7 +42,6 @@
+ Comment[x-test]=xxA Konqueror navigation panelxx
+ Comment[zh_CN]=Konqueror 导航面板
+ Comment[zh_TW]=Konqueror 導覽面板
+-Encoding=UTF-8
+ Icon=metabar
+ Name=Metabar
+ Name[ar]=شريط البيانات الوصفية
+diff -ur konq-plugins-orig/sidebar/metabar/src/metabar.desktop konq-plugins-4.3.3/sidebar/metabar/src/metabar.desktop
+--- konq-plugins-orig/sidebar/metabar/src/metabar.desktop	2009-11-05 14:44:44.000000000 +0100
++++ konq-plugins-4.3.3/sidebar/metabar/src/metabar.desktop	2010-06-18 18:37:38.871220969 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Link
+ URL=
+ Icon=metabar
+diff -ur konq-plugins-orig/uachanger/uachangerplugin.desktop konq-plugins-4.3.3/uachanger/uachangerplugin.desktop
+--- konq-plugins-orig/uachanger/uachangerplugin.desktop	2009-11-05 14:44:39.000000000 +0100
++++ konq-plugins-4.3.3/uachanger/uachangerplugin.desktop	2010-06-18 18:36:32.105346159 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=UserAgentChanger
+ X-KDE-PluginInfo-Author=Dawit Alemayehu
+ X-KDE-PluginInfo-Email=adawit@kde.org
+diff -ur konq-plugins-orig/validators/plugin_validators.desktop konq-plugins-4.3.3/validators/plugin_validators.desktop
+--- konq-plugins-orig/validators/plugin_validators.desktop	2009-11-05 14:44:43.000000000 +0100
++++ konq-plugins-4.3.3/validators/plugin_validators.desktop	2010-06-18 18:35:58.946221024 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=validators
+ X-KDE-PluginInfo-Author=Richard Moore, Andreas Schlapbach
+ X-KDE-PluginInfo-Email=rich@kde.org, schlpbch@iam.unibe.ch
+diff -ur konq-plugins-orig/webarchiver/plugin_webarchiver.desktop konq-plugins-4.3.3/webarchiver/plugin_webarchiver.desktop
+--- konq-plugins-orig/webarchiver/plugin_webarchiver.desktop	2009-11-05 14:44:40.000000000 +0100
++++ konq-plugins-4.3.3/webarchiver/plugin_webarchiver.desktop	2010-06-18 18:37:14.492346174 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ X-KDE-Library=webarchiver
+ X-KDE-PluginInfo-Author=Andreas Schlapbach
+ X-KDE-PluginInfo-Email=schlpbch@iam.unibe.ch
+diff -ur konq-plugins-orig/webarchiver/webarchivethumbnail.desktop konq-plugins-4.3.3/webarchiver/webarchivethumbnail.desktop
+--- konq-plugins-orig/webarchiver/webarchivethumbnail.desktop	2009-11-05 14:44:40.000000000 +0100
++++ konq-plugins-4.3.3/webarchiver/webarchivethumbnail.desktop	2010-06-18 18:37:11.450346207 +0200
+@@ -1,5 +1,4 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Type=Service
+ Name=Web Archives
+ Name[ar]=أرشيف الويب

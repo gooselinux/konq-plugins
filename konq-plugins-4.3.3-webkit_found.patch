@@ -1,0 +1,124 @@
+diff -up konq-plugins-4.3.3/autorefresh/CMakeLists.txt.webkit_found konq-plugins-4.3.3/autorefresh/CMakeLists.txt
+--- konq-plugins-4.3.3/autorefresh/CMakeLists.txt.webkit_found	2009-11-05 14:44:38.000000000 +0100
++++ konq-plugins-4.3.3/autorefresh/CMakeLists.txt	2009-12-17 17:02:15.307701596 +0100
+@@ -18,4 +18,6 @@ install(TARGETS autorefresh  DESTINATION
+ ########### install files ###############
+ 
+ install( FILES autorefresh.rc autorefresh.desktop  DESTINATION  ${DATA_INSTALL_DIR}/khtml/kpartplugins )
+-install( FILES autorefresh.rc autorefresh.desktop  DESTINATION  ${DATA_INSTALL_DIR}/webkitpart/kpartplugins )
++if(WEBKITKDE_FOUND)
++    install( FILES autorefresh.rc autorefresh.desktop  DESTINATION  ${DATA_INSTALL_DIR}/webkitpart/kpartplugins )
++endif(WEBKITKDE_FOUND)
+diff -up konq-plugins-4.3.3/babelfish/CMakeLists.txt.webkit_found konq-plugins-4.3.3/babelfish/CMakeLists.txt
+--- konq-plugins-4.3.3/babelfish/CMakeLists.txt.webkit_found	2009-11-05 14:44:32.000000000 +0100
++++ konq-plugins-4.3.3/babelfish/CMakeLists.txt	2009-12-17 17:00:27.528640005 +0100
+@@ -1,40 +1,8 @@
+-
+-
+-
+-include(MacroOptionalDependPackage)
+-
+-MACRO_OPTIONAL_DEPEND_PACKAGE(KdeWebKit "kdewebkit")
+-if(DEPEND_PACKAGE_KdeWebKit)
+-        macro_optional_find_package(KdeWebKit QUIET)
+-else(DEPEND_PACKAGE_KdeWebKit)
+-        set(KDEWEBKIT_FOUND FALSE)
+-endif(DEPEND_PACKAGE_KdeWebKit)
+-
+-MACRO_OPTIONAL_DEPEND_PACKAGE(WebKitPart "webkitpart")
+-if(DEPEND_PACKAGE_WebKitPart)
+-        macro_optional_find_package(WebKitPart QUIET)
+-else(DEPEND_PACKAGE_WebKitPart)
+-        set(WEBKITPART_FOUND FALSE)
+-endif(DEPEND_PACKAGE_WebKitPart)
+-
+-if( WEBKITPART_FOUND AND KDEWEBKIT_FOUND)
+-    set(WEBKITKDE_FOUND true)
+-endif( WEBKITPART_FOUND AND KDEWEBKIT_FOUND)
+-
+-
+-macro_log_feature(WEBKITKDE_FOUND "WebKitKde" "Webkitkde libraries and header files" "" FALSE "" "Webkitkde is necessary to compile support for WebKitKde.")
+-
+-macro_bool_to_01(WEBKITKDE_FOUND HAVE_WEBKITKDE)
+-
+-
+ if( WEBKITKDE_FOUND )
+     include_directories(${KDEWEBKIT_INCLUDE_DIR})
+     include_directories(${WEBKITPART_INCLUDE_DIR})
+ endif(WEBKITKDE_FOUND)
+ 
+-
+-
+-
+ configure_file(config-babelfish.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-babelfish.h )
+ 
+ ########### next target ###############
+diff -up konq-plugins-4.3.3/CMakeLists.txt.webkit_found konq-plugins-4.3.3/CMakeLists.txt
+--- konq-plugins-4.3.3/CMakeLists.txt.webkit_found	2009-11-05 18:15:12.000000000 +0100
++++ konq-plugins-4.3.3/CMakeLists.txt	2009-12-17 17:00:09.382701270 +0100
+@@ -13,6 +13,30 @@ if( NOT LIBKONQ_FOUND )
+     MESSAGE(FATAL_ERROR "Install kdebase before to try to compile konq-plugins")
+ endif( NOT LIBKONQ_FOUND )
+ 
++include(MacroOptionalDependPackage)
++
++MACRO_OPTIONAL_DEPEND_PACKAGE(KdeWebKit "kdewebkit")
++if(DEPEND_PACKAGE_KdeWebKit)
++    macro_optional_find_package(KdeWebKit QUIET)
++else(DEPEND_PACKAGE_KdeWebKit)
++    set(KDEWEBKIT_FOUND FALSE)
++endif(DEPEND_PACKAGE_KdeWebKit)
++
++MACRO_OPTIONAL_DEPEND_PACKAGE(WebKitPart "webkitpart")
++if(DEPEND_PACKAGE_WebKitPart)
++    macro_optional_find_package(WebKitPart QUIET)
++else(DEPEND_PACKAGE_WebKitPart)
++    set(WEBKITPART_FOUND FALSE)
++endif(DEPEND_PACKAGE_WebKitPart)
++
++if( WEBKITPART_FOUND AND KDEWEBKIT_FOUND)
++    set(WEBKITKDE_FOUND true)
++endif( WEBKITPART_FOUND AND KDEWEBKIT_FOUND)
++
++macro_log_feature(WEBKITKDE_FOUND "WebKitKde" "Webkitkde libraries and header files" "" FALSE "" "Webkitkde is necessary to compile support for WebKitKde.")
++
++macro_bool_to_01(WEBKITKDE_FOUND HAVE_WEBKITKDE)
++
+ add_subdirectory( crashes ) 
+ add_subdirectory( khtmlsettingsplugin ) 
+ add_subdirectory( kimgalleryplugin ) 
+diff -up konq-plugins-4.3.3/crashes/CMakeLists.txt.webkit_found konq-plugins-4.3.3/crashes/CMakeLists.txt
+--- konq-plugins-4.3.3/crashes/CMakeLists.txt.webkit_found	2009-11-05 14:44:38.000000000 +0100
++++ konq-plugins-4.3.3/crashes/CMakeLists.txt	2009-12-17 17:05:11.847576528 +0100
+@@ -19,5 +19,7 @@ install(TARGETS crashesplugin  DESTINATI
+ ########### install files ###############
+ 
+ install( FILES crashesplugin.rc crashesplugin.desktop  DESTINATION  ${DATA_INSTALL_DIR}/khtml/kpartplugins )
+-install( FILES crashesplugin.rc crashesplugin.desktop  DESTINATION  ${DATA_INSTALL_DIR}/webkitpart/kpartplugins ) 
++if(WEBKITKDE_FOUND)
++install( FILES crashesplugin.rc crashesplugin.desktop  DESTINATION  ${DATA_INSTALL_DIR}/webkitpart/kpartplugins )
++endif(WEBKITKDE_FOUND)
+ 
+diff -up konq-plugins-4.3.3/uachanger/CMakeLists.txt.webkit_found konq-plugins-4.3.3/uachanger/CMakeLists.txt
+--- konq-plugins-4.3.3/uachanger/CMakeLists.txt.webkit_found	2009-11-05 14:44:39.000000000 +0100
++++ konq-plugins-4.3.3/uachanger/CMakeLists.txt	2009-12-17 17:06:58.670577017 +0100
+@@ -19,4 +19,6 @@ install(TARGETS uachangerplugin  DESTINA
+ ########### install files ###############
+ 
+ install( FILES uachangerplugin.rc uachangerplugin.desktop  DESTINATION  ${DATA_INSTALL_DIR}/khtml/kpartplugins )
++if(WEBKITKDE_FOUND)
+ install( FILES uachangerplugin.rc uachangerplugin.desktop  DESTINATION  ${DATA_INSTALL_DIR}/webkitpart/kpartplugins )
++endif(WEBKITKDE_FOUND)
+diff -up konq-plugins-4.3.3/validators/CMakeLists.txt.webkit_found konq-plugins-4.3.3/validators/CMakeLists.txt
+--- konq-plugins-4.3.3/validators/CMakeLists.txt.webkit_found	2009-11-05 14:44:43.000000000 +0100
++++ konq-plugins-4.3.3/validators/CMakeLists.txt	2009-12-17 17:06:12.827576679 +0100
+@@ -51,7 +51,8 @@ install(TARGETS validatorsplugin  DESTIN
+ ########### install files ###############
+ 
+ install( FILES plugin_validators.rc plugin_validators.desktop  DESTINATION  ${DATA_INSTALL_DIR}/khtml/kpartplugins )
+-
++if(WEBKITKDE_FOUND)
+ install( FILES plugin_validators.rc plugin_validators.desktop  DESTINATION  ${DATA_INSTALL_DIR}/webkitpart/kpartplugins )
++endif(WEBKITKDE_FOUND)
+ 
+ install(FILES validators.kcfg DESTINATION ${KCFG_INSTALL_DIR})
